@@ -1,39 +1,28 @@
-# Angular QuickStart Source
-[![Build Status][travis-badge]][travis-badge-url]
+# Angular TDD Chapter6 Source
 
-This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
-the foundation for most of the documentation samples and potentially a good starting point for your application.
-
-It's been extended with testing support so you can start writing tests immediately.
-
-**This is not the perfect arrangement for your application. It is not designed for production.
-It exists primarily to get you started quickly with learning and prototyping in Angular**
-
-We are unlikely to accept suggestions about how to grow this QuickStart into something it is not.
-Please keep that in mind before posting issues and PRs.
+This repository exists primarily to get you started quickly with learning and prototyping in Angular. It's been extended with testing support so you can start writing tests immediately.
 
 ## Prerequisites
 
-Node.js and npm are essential to Angular development. 
-    
+Node.js and npm are essential to Angular development.
+
 <a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" title="Installing Node.js and updating npm">
 Get it now</a> if it's not already installed on your machine.
- 
+
 **Verify that you are running at least node `v4.x.x` and npm `3.x.x`**
 by running `node -v` and `npm -v` in a terminal/console window.
 Older versions produce errors.
 
 We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of node and npm.
 
-## Create a new project based on the QuickStart
+## Create a new project based on this sample project
 
 Clone this repo into new project folder (e.g., `my-proj`).
 ```bash
-git clone  https://github.com/angular/quickstart  my-proj
+git clone  https://github.com/jquerygeek/angular-TDD-chapter-6 my-proj
 cd my-proj
 ```
 
-We have no intention of updating the source on `angular/quickstart`.
 Discard everything "git-like" by deleting the `.git` folder.
 ```bash
 rm -rf .git  # non-Windows
@@ -69,7 +58,7 @@ npm install
 npm start
 ```
 
-The `npm start` command first compiles the application, 
+The `npm start` command first compiles the application,
 then simultaneously re-compiles and runs the `lite-server`.
 Both the compiler and the server watch for file changes.
 
@@ -95,7 +84,6 @@ Here are the test related scripts:
 
 ## Testing
 
-The QuickStart documentation doesn't discuss testing.
 This repo adds both karma/jasmine unit test and protractor end-to-end testing support.
 
 These tools are configured for specific conventions described below.
@@ -106,7 +94,7 @@ We recommend that you shut down one before starting another.*
 ### Unit Tests
 TypeScript unit-tests are usually in the `app` folder. Their filenames must end in `.spec`.
 
-Look for the example `app/app.component.spec.ts`.
+Look for the example `spec/unit/app.component.spec.ts`.
 Add more `.spec.ts` files as you wish; we configured karma to find them.
 
 Run it with `npm test`
@@ -126,7 +114,7 @@ restart it. No worries; it's pretty quick.
 E2E tests are in the `e2e` directory, side by side with the `app` folder.
 Their filenames must end in `.e2e-spec.ts`.
 
-Look for the example `e2e/app.e2e-spec.ts`.
+Look for the example `spec/e2e/app.e2e-spec.ts`.
 Add more `.e2e-spec.js` files as you wish (although one usually suffices for small projects);
 we configured protractor to find them.
 
@@ -140,6 +128,3 @@ A custom reporter (see `protractor.config.js`) generates a  `./_test-output/prot
 which is easier to read; this file is excluded from source control.
 
 Shut it down manually with `Ctrl-C`.
-
-[travis-badge]: https://travis-ci.org/angular/quickstart.svg?branch=master
-[travis-badge-url]: https://travis-ci.org/angular/quickstart
